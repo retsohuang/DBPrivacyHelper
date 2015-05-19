@@ -57,7 +57,7 @@
 }
 
 - (void) setIcon:(NSString *)icon text:(NSString *)text row:(NSInteger)row {
-    _iconView.image = [UIImage imageNamed:icon];
+    _iconView.image = [UIImage imageNamed:icon inBundle:[NSBundle bundleForClass:self.class] compatibleWithTraitCollection:nil];
     _cellLabel.text = text;
     self.textLabel.text = [NSString stringWithFormat:@".%li", (long)row];
 }
